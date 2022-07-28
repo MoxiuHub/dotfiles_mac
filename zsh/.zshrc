@@ -1,12 +1,32 @@
 # alias
 alias vi="nvim"
 alias reload="source ~/.zshrc"
-alias ls="lsd"
+alias ls="ls -a"
 alias ll="ls -l"
 alias la="ls -la"
 alias lt="ls --tree"
-alias proxy="export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;export ALL_PROXY=socks5://127.0.0.1:1080"
-alias unproxy="unset http_proxy;unset https_proxy;unset ALL_PROXY"
+#alias proxy="export http_proxy=http://127.0.0.1:6152;export https_proxy=http://127.0.0.1:6153;export ALL_PROXY=socks5://127.0.0.1:6152"
+#alias unproxy="unset http_proxy;unset https_proxy;unset ALL_PROXY"
+
+#Java
+alias java18="export JAVA_HOME=`/usr/libexec/java_home -v 18.0.2`; java -version"
+alias java17="export JAVA_HOME=`/usr/libexec/java_home -v 17.0.4`; java -version"
+alias java8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_341`; java -version"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_341`
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+export M3_HOME=/opt/maven
+export PATH=$PATH:$JAVA_HOME/bin:$M3_HOME/bin
+#Golang
+export GOPATH=/Users/jonny/go
+export GOPBIN=/Users/jonny/go/bin
+export GO111MODULE=on
+# Others
+export PATH=.:$PATH:$HOME/bin:/usr/bin:/usr/local/bin:/usr/libexec
+export TERM='xterm-256color'
+export VISUAL="vim"
+export LANG=zh_CN.UTF-8
+export ZSH="$HOME/.oh-my-zsh"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
