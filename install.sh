@@ -116,7 +116,7 @@ if [[ $? = 0 ]]; then
   if [[ ! "$firstname" ]]; then
     response='n'
   else
-    echo  "I see that your full name is $COL_YELLOW$firstname $lastname$COL_RESET"
+    echo  "I see that your full name is $firstname $lastname"
     read -r -p "Is this correct? [Y|n] " response
   fi
 
@@ -131,7 +131,7 @@ if [[ $? = 0 ]]; then
   if [[ ! $email ]]; then
     response='n'
   else
-    echo  "The best I can make out, your email address is $COL_YELLOW$email$COL_RESET"
+    echo  "The best I can make out, your email address is $email"
     read -r -p "Is this correct? [Y|n] " response
   fi
 
@@ -144,7 +144,7 @@ if [[ $? = 0 ]]; then
   fi
 
 
-  running "replacing items in .gitconfig with your info ($COL_YELLOW$fullname, $email, $githubuser$COL_RESET)"
+  running "replacing items in .gitconfig with your info ($fullname, $email, $githubuser)"
 
   # test if gnu-sed or MacOS sed
 
