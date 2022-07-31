@@ -1,3 +1,5 @@
 # -*- mode: gitignore; -*-
 .DS_Store
+
+/.history
 .gitignore_*
