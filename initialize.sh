@@ -78,7 +78,7 @@ fi
 
 # 安装 NodeJS
 
-
+# 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
 
 
 # 挂载磁盘
