@@ -76,10 +76,9 @@ if isInstall brew && isMacOS; then
     fi
 fi
 
-# 安装 NodeJS
+# 安装 
 
-# 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
-
+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
 
 # 挂载磁盘
 
