@@ -1,0 +1,10 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zprofile.pre.zsh" ]] && . "$HOME/.fig/shell/zprofile.pre.zsh"
+# Setting PATH for Python 3.10
+# The original version is saved in .zprofile.pysave
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+export PATH=".:$HOME/bin:/usr/local/bin:/usr/local/*/bin:/usr/local/opt/lua@5.3/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zprofile.post.zsh" ]] && . "$HOME/.fig/shell/zprofile.post.zsh"

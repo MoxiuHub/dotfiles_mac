@@ -1,0 +1,21 @@
+# Ngrok
+
+# alias ngrok-workfit="ngrok http -subdomain=kevin-workfit-dev -host-header=workfit.test 80"
+alias proxy="export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153"
+alias python='python3'
+alias pip='pip3'
+alias appstoreapps='mdfind kMDItemAppStoreHasReceipt=1'
+alias vi="nvim"
+alias reload="source ~/.zshrc"
+alias ls="exa -a"
+alias ll="exa -l"
+alias la="exa -la"
+alias lt="exa --tree"
+
+alias grep='grep -nir --exclude-dir={.git,dist,build,.idea,.vscode,.history,node_modules}'
+
+# remix-ide
+alias startremix='/bin/zsh $HOME/scripts/start_remix.sh'
+alias stopremix='/bin/zsh $HOME/scripts/stop_remix.sh'
+
+
