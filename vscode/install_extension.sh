@@ -1,6 +1,8 @@
-#/bin/bash
+#!/usr/bin/env bash
 code --install-extension 2gua.rainbow-brackets
 code --install-extension aliariff.auto-add-brackets
+code --install-extension chrisbibby.hide-node-modules
+code --install-extension cliffordfajardo.highlight-line-vscode
 code --install-extension Dart-Code.dart-code
 code --install-extension Dart-Code.flutter
 code --install-extension dbaeumer.vscode-eslint
@@ -10,32 +12,44 @@ code --install-extension esbenp.prettier-vscode
 code --install-extension FallenMax.mithril-emmet
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
+code --install-extension formulahendry.code-runner
+code --install-extension foxundermoon.shell-format
 code --install-extension golang.go
+code --install-extension iceliu.highlight-icemode
 code --install-extension jdinhlife.gruvbox
+code --install-extension MarkosTh09.color-picker
 code --install-extension JuanBlanco.solidity
-code --install-extension lihui.vs-color-picker
 code --install-extension mechatroner.rainbow-csv
 code --install-extension mgmcdermott.vscode-language-babel
 code --install-extension MohitPadhye.figextension
+code --install-extension mohsen1.prettify-json
 code --install-extension MS-CEINTL.vscode-language-pack-zh-hans
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
+code --install-extension npxms.hide-gitignored
 code --install-extension ms-toolsai.jupyter
 code --install-extension ms-toolsai.jupyter-keymap
 code --install-extension ms-toolsai.jupyter-renderers
 code --install-extension oderwat.indent-rainbow
+code --install-extension PranshuAgrawal.toggle-case
 code --install-extension premparihar.gotestexplorer
 code --install-extension quicktype.quicktype
 code --install-extension redhat.fabric8-analytics
 code --install-extension redhat.vscode-xml
-code --install-extension sainnhe.gruvbox-material
+code --install-extension Remisa.shellman
+code --install-extension RemixProject.ethereum-remix
+code --install-extension richie5um2.vscode-sort-json
 code --install-extension sirmspencer.vscode-autohide
 code --install-extension steoates.autoimport
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension styled-components.vscode-styled-components
 code --install-extension sysoev.language-stylus
 code --install-extension thisismanta.stylus-supremacy
+code --install-extension timonwong.shellcheck
 code --install-extension trufflesuite-csi.truffle-vscode
 code --install-extension Tyriar.sort-lines
 code --install-extension vscode-icons-team.vscode-icons
+code --install-extension XadillaX.viml
+code --install-extension yzane.markdown-pdf
 code --install-extension xyz.local-history
+

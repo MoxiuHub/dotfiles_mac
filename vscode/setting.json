@@ -1,131 +1,242 @@
 {
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[stylus]": {
-        "editor.formatOnSave": true
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "breadcrumbs.enabled": true,
-    "cSpell.userWords": [
-        "antd",
-        "autofetch",
-        "autoimport",
-        "bindgetphonenumber",
-        "config",
-        "esbenp",
-        "get",
-        "get ios config",
-        "gopls",
-        "Gruvbox",
-        "happypack",
-        "ios",
-        "jonny",
-        "Menlo"
-    ],
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.accessibilitySupport": "off",
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
-    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'DejaVuSansMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 14,
-    "editor.inlineSuggest.enabled": true,
-    "editor.renderControlCharacters": true,
-    "editor.renderWhitespace": "all",
-    "editor.tabCompletion": "on",
-    "editor.wordWrap": "on",
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact",
-        "vue-html": "html"
-    },
-    "emmet.syntaxProfiles": {
-        "javascript": "jsx",
-        "vue": "html",
-        "vue-html": "html"
-    },
-    "emmet.triggerExpansionOnTab": true,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "extensions.autoCheckUpdates": false,
-    "extensions.autoUpdate": false,
-    "extensions.ignoreRecommendations": true,
-    "files.associations": {
-        "*.tsx": "typescriptreact"
-    },
-    "files.autoSave": "onFocusChange",
-    "files.eol": "\n",
-    "files.exclude": {
-        "**/.DS_Store": true,
-        "**/.cache--happypack": true,
-        "**/.git": true,
-        "**/.hg": true,
-        "**/.history": true,
-        "**/.svn": true,
-        "**/.vscode": true,
-        "**/CVS": true,
-        "**/build": true,
-        "**/dist": true
-    },
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/.history": true,
-        "**/bower_components/**": true,
-        "**/dist/**": true,
-        "**/node_modules": true,
-        "**/tmp/**": true
-    },
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-    "go.executable.path": "/usr/local/bin/go",
-    "go.toolsManagement.autoUpdate": true,
-    "go.useLanguageServer": true,
-    "gopls": {
-        "completeUnimported": true,
-        "deepCompletion": true,
-        "usePlaceholders": true,
-        "watchFileChanges": true
-    },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "prettier.enable": false,
-    "prettier.tabWidth": 4,
-    "scm.diffDecorationsGutterWidth": 5,
-    "search.followSymlinks": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "stylusSupremacy.insertBraces": false,
-    "stylusSupremacy.insertColons": true,
-    "stylusSupremacy.insertNewLineAroundBlocks": true,
-    "stylusSupremacy.insertNewLineAroundImports": true,
-    "stylusSupremacy.insertSemicolons": false,
-    "typescript.check.npmIsInstalled": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "update.mode": "none",
-    "update.showReleaseNotes": false,
-    "window.title": "${activeEditorLong}",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
-    "workbench.enableExperiments": false,
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.startupEditor": "newUntitledFile",
-    "xml.format.maxLineWidth": 150,
-    "autoimport.filesToScan": "'**/*.{ts, tsx}'",
-    "autoimport.spaceBetweenBraces": true
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[stylus]": {
+		"editor.formatOnSave": true
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[xml]": {
+		"editor.defaultFormatter": "redhat.vscode-xml"
+	},
+	"autoHide.panelDelay": 8000,
+	"autoHide.sideBarDelay": 1000,
+	"autoimport.filesToScan": "'**/*.{ts, tsx}'",
+	"autoimport.spaceBetweenBraces": true,
+	"breadcrumbs.enabled": true,
+	"cSpell.userWords": [
+		"antd",
+		"autofetch",
+		"autoimport",
+		"bindgetphonenumber",
+		"config",
+		"esbenp",
+		"get",
+		"get ios config",
+		"gopls",
+		"Gruvbox",
+		"happypack",
+		"ios",
+		"jonny",
+		"Menlo"
+	],
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.accessibilitySupport": "off",
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true
+	},
+	"editor.fontFamily": "'JetBrainsMono Nerd Font', 'DejaVuSansMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontSize": 14,
+	"editor.formatOnSave": true,
+	"editor.inlineSuggest.enabled": true,
+	"editor.renderControlCharacters": true,
+	"editor.renderWhitespace": "all",
+	"editor.tabCompletion": "on",
+	"editor.tokenColorCustomizations": {
+		"comments": "#629755"
+	},
+	"editor.wordWrap": "on",
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+		"vue-html": "html"
+	},
+	"emmet.syntaxProfiles": {
+		"javascript": "jsx",
+		"vue": "html",
+		"vue-html": "html"
+	},
+	"emmet.triggerExpansionOnTab": true,
+	"explorer.autoReveal": false,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"extensions.autoCheckUpdates": false,
+	"extensions.autoUpdate": false,
+	"extensions.ignoreRecommendations": true,
+	"files.associations": {
+		"*.html": "html",
+		"*.nj": "html",
+		"*.plist": "plist",
+		"*.sh": "shellscript",
+		"*.strings": "plist",
+		"*.tpl": "html",
+		"*.tsx": "typescriptreact",
+		"*.vue": "vue"
+	},
+	"files.autoSave": "onFocusChange",
+	"files.eol": "\n",
+	"files.exclude": {
+		"**/*.lock": true,
+		"**/*.log": true,
+		"**/*.log.1": true,
+		"**/.DS_Store": true,
+		"**/.cache--happypack": true,
+		"**/.git": true,
+		"**/.hg": true,
+		"**/.history": true,
+		"**/.idea": true,
+		"**/.svn": true,
+		"**/.vscode": true,
+		"**/CVS": true,
+		"**/build": true,
+		"**/dist": true,
+		"**/logs": true,
+		"**/node_modules": true,
+		"**/target": true
+	},
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/.history": true,
+		"**/bower_components/**": true,
+		"**/dist/**": true,
+		"**/node_modules": true,
+		"**/tmp/**": true
+	},
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"git.enableSmartCommit": true,
+	"go.executable.path": "/usr/local/bin/go",
+	"go.toolsManagement.autoUpdate": true,
+	"go.useLanguageServer": true,
+	"gopls": {
+		"completeUnimported": true,
+		"deepCompletion": true,
+		"usePlaceholders": true,
+		"watchFileChanges": true
+	},
+	"highlight-icemode.borderRadius": "1px",
+	"highlightLine.borderColor": "#fb4934",
+	"highlightLine.borderStyle": "outset",
+	"highlightLine.borderWidth": "1px",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"prettier.semi": false,
+	"prettier.singleQuote": true,
+	"prettier.tabWidth": 4,
+	"prettier.trailingComma": "none",
+	"python.languageServer": "Jedi",
+	"redhat.telemetry.enabled": true,
+	"scm.diffDecorationsGutterWidth": 5,
+	"search.followSymlinks": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"shellcheck.customArgs": [],
+	"shellcheck.enable": true,
+	"shellcheck.enableQuickFix": true,
+	"shellcheck.exclude": [],
+	//  "shellcheck.executablePath": "", // Priority: user defined > bundled shellcheck binary > "shellcheck"
+	"shellcheck.ignoreFileSchemes": ["git", "gitfs"],
+	"shellcheck.ignorePatterns": {
+		"**/*.xonshrc": true,
+		"**/*.xsh": true,
+		"**/*.zlogin": true,
+		"**/*.zlogout": true,
+		"**/*.zprofile": true,
+		"**/*.zsh": true,
+		"**/*.zsh-theme": true,
+		"**/*.zshenv": true,
+		"**/*.zshrc": true,
+		"**/zlogin": true,
+		"**/zlogout": true,
+		"**/zprofile": true,
+		"**/zshenv": true,
+		"**/zshrc": true
+	},
+	"shellcheck.run": "onType",
+	"sortJSON.orderOverride": ["name", "version", "description"],
+	"stylusSupremacy.insertBraces": false,
+	"stylusSupremacy.insertColons": true,
+	"stylusSupremacy.insertNewLineAroundBlocks": true,
+	"stylusSupremacy.insertNewLineAroundImports": true,
+	"stylusSupremacy.insertSemicolons": false,
+	"terminal.integrated.allowChords": false,
+	"terminal.integrated.automationProfile.osx": {
+		"args": ["-l"],
+		"overrideName": true,
+		"path": "/bin/zsh"
+	},
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.env.osx": {
+		"FIG_NEW_SESSION": "1"
+	},
+	"terminal.integrated.fontFamily": "DroidSansMono Nerd Font Mono",
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.letterSpacing": 0.1,
+	"terminal.integrated.lineHeight": 1.2,
+	"toggleCase.case.capitalCase": false,
+	"toggleCase.case.dotCase": false,
+	"toggleCase.case.headerCase": false,
+	"toggleCase.case.kebabCase": false,
+	"toggleCase.case.lowerCase": false,
+	"toggleCase.case.pathCase": false,
+	"toggleCase.case.sentenceCase": false,
+	"toggleCase.case.titleCase": false,
+	"toggleCase.case.upperCase": false,
+	"toggleCase.notification.notifyOnChange": false,
+	"typescript.check.npmIsInstalled": false,
+	"typescript.locale": "zh-CN",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"update.mode": "none",
+	"update.showReleaseNotes": false,
+	"vscode-color-picker.languages": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"postcss",
+		"xml",
+		"html",
+		"jajd",
+		"json",
+		"css",
+		"less",
+		"sass",
+		"scss",
+		"stylus"
+	],
+	"vsicons.dontShowNewVersionMessage": true,
+	"window.title": "${activeEditorLong}",
+	"workbench.colorCustomizations": {
+		"editor.findMatchBackground": "#d65d0e", //搜索選取字色 'you can set other color'
+		"editor.findMatchHighlightBackground": "#b16286", //搜索選取字改透明色 'required important'
+		"editor.selectionBackground": "#d65d0e", //選取字色 'you can set other color'
+		"editor.selectionHighlightBackground": "#b16286", //選取字  'required important'
+		"editor.wordHighlightBackground": "#b57614", //全文相同選取字 'required important'
+		"editorBracketMatch.background": "#cc241d", //括號的背景色 'you can set other color'
+		"editorBracketMatch.border": "#af3a03" //括號的框線色 'you can set other color'
+	},
+	"workbench.colorTheme": "Gruvbox Dark Hard",
+	"workbench.editor.showTabs": true, // 打开文件不覆盖
+	"workbench.editor.untitled.hint": "hidden",
+	"workbench.enableExperiments": false,
+	"workbench.experimental.editor.dropIntoEditor.enabled": false,
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.startupEditor": "newUntitledFile",
+	"xml.format.maxLineWidth": 150,
+	"xml.java.home": "`$JAVA_HOME`"
 }
+
