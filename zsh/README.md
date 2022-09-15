@@ -4,11 +4,14 @@
 
 |安装文件|映射文件|
 |----|----|
-|z | .z |
 |zalias | .zalias |
 |zprofile | .zprofile |
 |zshenv | .zshenv |
 |zshrc | .zshrc |
 |profile | .profile |
 
+### Install
 
+```bash
+bash ./install.sh
+```
