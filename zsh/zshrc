@@ -87,7 +87,7 @@ esac
 
 # Source files {{{2
 # Load aliases
-# source ~/dotfiles/zsh/aliases.zsh
+source ~/.dotfiles/zsh/aliases.zsh
 
 # Apply FZF configuration
 # source ~/dotfiles/zsh/fzf.zsh
