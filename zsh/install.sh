@@ -10,7 +10,6 @@ rm -rf ~/.zprofile
 rm -rf ~/.profile
 
 mkdir -p ~/.zsh
-ln -s ./zalias ~/zsh/.zalias
 ln -s ./zprofile ~/.zprofile
 ln -s ./zshenv ~/.zshenv
 ln -s ./zshrc ~/.zshrc
