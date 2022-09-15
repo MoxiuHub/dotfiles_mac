@@ -1,6 +1,46 @@
 #!/bin/bash
 
-brew install exa
+# 使用示例:
+# echo "$(whichOS)"
+whichOS() {
+    os_platform="$(uname)"
+    os_arch="$(uname -m)"
+    if [ "$os_platform" == "Darwin" ]; then
+        # macos 判断
+        if [ "$os_arch" == 'arm64' ]; then
+            echo "Apple" # Apple Silicon
+            return 0
+        elif [ "$os_arch" == 'x86_64' ]; then
+            echo "Intel" # Intel
+            return 0
+        fi
+    elif [ "$(os_platform)" == "Linux" ]; then
+        linux_type="$(uname -a)"
+        # Linux 判断
+        if [[ $linux_type =~ "CentOS" ]]; then # CentOS
+            echo "CentOS"
+            return 0
+        elif [[ $linux_type =~ "Ubuntu" ]]; then # Ubuntu
+            echo "Ubuntu"
+            return 0
+        fi
+    else
+        echo "$os_platform"
+        return 0
+    fi
+}
+
+if isInstall exa; then
+    echo "exa --version"
+else
+    if [ $(whichOS) = "Darwin" ]; then
+        brew install exa
+    fi
+
+    if [ $(whichOS) = "Ubuntu" ]; then
+        brew install exa
+    fi
+fi
 
 rm -rf ~/.zshrc ~/.zsh ~/.zshenv ~/.zprofile ~/.profile ~/.p10k.zsh
 
