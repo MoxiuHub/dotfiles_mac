@@ -1,5 +1,4 @@
 # common commands
-alias vi='vim'
 alias c="clear"
 alias ...="cd ../../"
 alias ....="cd ../../../"
@@ -7,7 +6,6 @@ alias mkdir="mkdir -p"
 alias cp="cp -rf"
 alias rm="rm -rf"
 alias reload="source ~/.zshrc"
-alias proxy="export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153"
 alias python='python3'
 alias pip='pip3'
 alias appstoreapps='mdfind kMDItemAppStoreHasReceipt=1'
