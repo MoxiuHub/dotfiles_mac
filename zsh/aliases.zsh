@@ -25,12 +25,12 @@ alias fgrep='fgrep -G'
 alias grep='grep -nir --exclude-dir={.git,dist,build,.idea,.vscode,.history,node_modules}'
 
 # list
-alias l.='exa -ld .* --color=auto --icons --no-permissions --git'
-alias la='exa -a --color=auto --icons --no-permissions --git'
-alias ls='exa -l --color=auto --icons --no-permissions --git'
-alias ld='exa -D --color=auto --icons --no-permissions --git'
-alias ll='exa -la --color=auto --icons --no-permissions --git'
-alias lt='exa -T --color=auto --icons --no-permissions --git'
+alias l.='exa -ld .* --color=auto --icons --no-permissions'
+alias la='exa -a --color=auto --icons --no-permissions'
+alias ls='exa -l --color=auto --icons --no-permissions'
+alias ld='exa -D --color=auto --icons --no-permissions'
+alias ll='exa -la --color=auto --icons --no-permissions'
+alias lt='exa -T --color=auto --icons --no-permissions'
 
 # Desktop App
 alias bob="open /Applications/Bob.app"
