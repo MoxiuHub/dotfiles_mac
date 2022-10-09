@@ -36,7 +36,6 @@ plugins=(
     z
     zsh-autosuggestions
     zsh-nvm
-    #fzf-tab # fzf-tab should be the last plugin to bind "^I"
 )
 # Settings that must be applid before loading Oh-My-Zsh {{{2
 
@@ -50,26 +49,17 @@ CASE_SENSITIVE="true"
 DISABLE_MAGIC_FUNCTIONS=true
 
 # 启用 node 版本管理器 延迟加载
-export NVM_LAZY_LOAD=true
+#export NVM_LAZY_LOAD=true
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim')
-
 if [[ -d "${ZSH_CUSTOM}/plugins/zsh-completions/src" ]]; then
   fpath+="${ZSH_CUSTOM}/plugins/zsh-completions/src"
 fi
-
-# }}}
+#}}}
 
 # 加载 oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # ZSH {{{1
-
-# 应用合理的 zsh 设置
-# source ~/dotfiles/zsh/zshopt
-
-# Bind C+Space to accept the current suggestion
-bindkey '^ ' autosuggest-accept
-
 # Set the default umask
 umask 022
 
@@ -87,36 +77,47 @@ esac
 
 # Source files {{{2
 # Load aliases
-source ~/.dotfiles/zsh/aliases.zsh
-
-# Apply FZF configuration
-# source ~/dotfiles/zsh/fzf.zsh
-
-# Load any extra settings
-# test -f ~/dotfiles/zsh/extras && source ~/dotfiles/zsh/extras
+source ~/.dotfile/zsh/aliases.zsh
 
 # Completion {{{3
-
 # 设置描述格式以启用组支持
 zstyle ':completion:*:descriptions' format '[%d]'
-
 # 完成 `git checkout` 时禁用排序
 zstyle ':completion:*:git-checkout:*' sort false
-
 # 仅显示目标标记以完成 make 命令
 zstyle ':completion:*:*:make::' tag-order 'targets variables'
-
 # 在完成“ kill”时预览命令行参数
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
 #}}}
 
 # Other {{{4
-
 # disable highlighting of pasted text
 zle_highlight=('paste:none')
+autoload -U compinit && compinit
 
-# Reload the completions (uncomment if zsh-completions don't work)
-# autoload -U compinit && compinit
+# NVM: Deeper Shell Integration
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
+      nvm use
+    fi
+  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #}}}
 
 # Fig post block. Keep at the bottom of this file.
@@ -124,3 +125,4 @@ zle_highlight=('paste:none')
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
