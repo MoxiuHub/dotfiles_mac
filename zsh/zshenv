@@ -7,6 +7,15 @@ export HOMEBREW_NO_AUTO_UPDATE=true
 export PATH=$HOME/.npm-global/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#Golang
+export GO111MODULE=on
+export GOPATH=$HOME/go
+export GOPBIN=$HOME/go/bin
+
 #Java
 # alias java18="export JAVA_HOME=`/usr/libexec/java_home -v 18.0.2`; java -version"
 # alias java17="export JAVA_HOME=`/usr/libexec/java_home -v 17.0.4`; java -version"
@@ -17,7 +26,3 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export M3_HOME=/opt/maven
 # export PATH=$PATH:$JAVA_HOME/bin:$M3_HOME/bin
 
-#Golang
-export GO111MODULE=on
-export GOPATH=$HOME/go
-export GOPBIN=$HOME/go/bin
