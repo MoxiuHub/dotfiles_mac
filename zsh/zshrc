@@ -1,28 +1,15 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Oh-My-Zsh {{{1
 export ZSH="$HOME/.oh-my-zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-# plugins
-# git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
-# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-# git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
-# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# git clone https://github.com/z-shell/F-Sy-H.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/F-Sy-H
+
 plugins=(
     aws
     colored-man-pages
     docker
-    F-Sy-H
     git
     golang
     helm
@@ -38,47 +25,22 @@ plugins=(
     zsh-nvm
 )
 # Settings that must be applid before loading Oh-My-Zsh {{{2
-
 # Set the theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
 # 使用 区分大小写 完成
 CASE_SENSITIVE="true"
-
 # 修复慢粘贴
 DISABLE_MAGIC_FUNCTIONS=true
-
-# 启用 node 版本管理器 延迟加载
-#export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim')
-if [[ -d "${ZSH_CUSTOM}/plugins/zsh-completions/src" ]]; then
-  fpath+="${ZSH_CUSTOM}/plugins/zsh-completions/src"
-fi
+# Set the default umask
+umask 022
 #}}}
 
 # 加载 oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# ZSH {{{1
-# Set the default umask
-umask 022
-
-# OSTYPE specific settings
-case "${OSTYPE}" in
-    linux*)
-        if (( $+commands[setxkbmap] )); then
-            setxkbmap -option caps:escape_shifted_capslock
-            setxkbmap -option altwin:swap_lalt_lwin
-        fi
-        ;;
-    *) ;;
-esac
-#}}}
-
 # Source files {{{2
 # Load aliases
 source ~/.dotfile/zsh/aliases.zsh
-
 # Completion {{{3
 # 设置描述格式以启用组支持
 zstyle ':completion:*:descriptions' format '[%d]'
@@ -93,28 +55,7 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w 
 # Other {{{4
 # disable highlighting of pasted text
 zle_highlight=('paste:none')
-autoload -U compinit && compinit
 
-# NVM: Deeper Shell Integration
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
-      nvm use
-    fi
-  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
